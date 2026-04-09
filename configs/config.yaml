@@ -1,0 +1,14 @@
+defaults:
+  - _self_
+
+# Model and hyperparameters
+model: google/gemma-3-27b-it:free
+batch_size: 5
+reasoning: null
+
+# Evaluation settings
+num_sentences: 2000  # Param to limit sentences in original dataset
+test_size: 0.3
+
+# Prompt configuration (without .yaml)
+prompt: protocol_based
