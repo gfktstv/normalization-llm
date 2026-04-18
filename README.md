@@ -2,6 +2,8 @@
 
 An LLM-based text normalization system that uses OpenRouter API to normalize Russian text sentences. The project evaluates various LLM models on their ability to normalize text according to linguistic rules.
 
+The code is prepared for the article «Assessing the Applicability of Frontier LLMs for Russian Social Media Text Normalization» (2026)
+
 ## Environment Setup
 
 ### 1. Install Python Dependencies
@@ -46,9 +48,11 @@ python3 main.py
 Edit `configs/config.yaml` to change:
 - `model`: LLM model name (e.g., `anthropic/claude-3.5-sonnet`, `openai/gpt-4o`)
 - `batch_size`: Number of sentences per request (1-7 recommended)
-- `prompt`: Which prompt template to use from `configs/prompts/`
-- `reasoning`: Enable model reasoning (`minimal`, `low`, `medium`, `high`, or `null`)
+- `prompt`: Which prompt template to use from `configs/prompts/` (should be written without .yaml extensions, e.g. `prompt=protocol_based`)
+- `reasoning`: Enable model reasoning (`minimal`, `low`, `medium`, `high`, or `null`)  (beware that max tokens limit can be set in `main.py -> send_request(...)`)
 - `test_size`: Train/test split ratio (0.0-1.0)
+
+Do not change:
 - `num_sentences`: Limit number of sentences from original dataset (should be set to 2000 by default)
 
 Example:
@@ -69,7 +73,7 @@ normalization-llm/
 ├── pyproject.toml          # Project dependencies (pip install .)
 ├── requirements.txt        # Pinned dependency versions
 ├── .env.example            # Template for environment variables
-├── .env                    # Your local environment variables (git-ignored)
+├── .env                    # Local environment variables (git-ignored)
 │
 ├── configs/                # Hydra configuration files
 │   ├── config.yaml         # Main configuration
