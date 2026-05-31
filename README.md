@@ -1,8 +1,8 @@
 # Text Normalization with LLMs
 
-An LLM-based text normalization system that uses OpenRouter API to normalize Russian text sentences. The project evaluates various LLM models on their ability to normalize text according to linguistic rules.
+An LLM-based text normalization system that uses OpenRouter API to normalize Russian text sentences. The project evaluates various LLM models on their ability to normalize text according to linguistic rules. The code is prepared for the article «Assessing the Applicability of Frontier LLMs for Russian Social Media Text Normalization» (2026) at the conference Internet and Modern Society 2026 (IMS-2026) as part of the international seminar Computational Linguistics (CompLing-2026).
 
-The code is prepared for the article «Assessing the Applicability of Frontier LLMs for Russian Social Media Text Normalization» (2026)
+Prompts can be found in configs/prompts (https://github.com/gfktstv/normalization-llm/tree/main/configs/prompts)
 
 ## Environment Setup
 
